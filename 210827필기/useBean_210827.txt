@@ -1,0 +1,63 @@
+기본문법 → 
+<%@ 지시어
+<jsp: 액션태그
+<%=  표현식 
+<% 스크립트 릿
+
+내장객체 -> scope session, application
+
+VO, DAO java클래스를 사용 
+  → <jsp: useBean
+※vo,dao같은 자바클래스를 사용을 jsp액션태그를 사용함
+
+빈즈Beans
+ : 기능을 수행하는 컴포넌트(모듈)
+(GUI 위젯을 제공하기위해서 탄생함) --> 빈즈생성목적
+
+브라우저 -->> get or post 요청 .html, .jsp --->> <jsp:useBean> 으로 보통 DAO클래스을 사용함	
+					(기능을 수행하는 컴포넌트 이므로 == DAO 기능)
+	--->> DB 처리 ---[컨트롤러]→ 뷰를 클라이언트에게 서비스
+
+빈즈 클래스를 주로 컨트롤러에서 사용하고, 모델에서부터 받아와서 뷰에 필요한 객체들을 만들어서 공급
+
+import vo류만 만들어서씀
+jsp: 연결하는 태그
+
+
+
+[빈즈 클래스 구조]
+   기본생성자 -> setter메서드 
+1) 반드시 기본생성자가 필요함! (그래야 setter메서드를 사용할때 *을통해 객체의 속성을 채울수있음)
+2) getter, setter 메서드가 자동매핑 -> 이름이 정해져있음에 유의!
+(메서드명이 setApple()이 아닌, setapple()이면 값을 못갖고온다.)
+ㄱ
+<jsp:useBean 사용할 때 확인하는 속성 : id, class , scope / 객체명 클래스위치 스코프만큼 쓰겠다.(session, request, application)
+
+
+
+Q)강사님! DAO를 첫 페이지에서 useBean으로 스코프 단위를 애플리케이션으로 지정하고,
+다른페이지에서 정한 id명으로 호출하려고하는데 오류가 뜨더라구요..! 매페이지마다 객체화를 해주어야하나욤??
+A)아하~ 네네
+액션태그 명시해주셔야 쓸수있고요!
+안의 데이터는 유지됩니당
+
+
+Q) 강사님 저 궁금한게있는데요!!
+액션태그에 scope속성 application에서 최초 한번만 set을해주는 개념인건가용??
+매번 페이지를 실행할때 어떻게 적용되는건지 궁금해서요!!
+A) <jsp:useBean id="memberDAO" class="day44_0827.MemberDAO_2" scope="application"/>
+<%-- └> application.get("memberDAO")==null? 같은의미이므로 매 페이지마다 써보자 --%>
+
+
+
+
+
+
+
+★★★ 일 처리의 순서
+View ------> M,C
+M,C -------> View >> 이걸 더 선호
+
+
+select() -> R select (ALL select)
+login() -> R select (one Select)

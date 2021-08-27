@@ -1,0 +1,96 @@
+깃허브 터미널
+이름 : lyena
+이메일 : lyena8958@gmail.com
+
+https://github.com/lyena8958/lyena.git
+
+
+cmd
+
+▶ cd '폴더링크' 
+ex) 폴더링크 == C:\KIM_0622\workspace\국비_JAVA_workspace-백엔드\day44_0827
+
+▶git init
+print▷ Initialized empty Git repository in C:/KIM_0622/workspace/국비_JAVA_workspace-백엔드/day44_0827/.git/
+
+▶git config user.name "이름"
+
+▶git config user.email "아이디@도메인 주소"
+
+▶git status
+print▷ (폴더명 나올 때 적색문구로 나옴)
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .classpath
+        .project
+        .settings/
+        WebContent/
+        build/
+        src/
+nothing added to commit but untracked files present (use "git add" to track)
+
+▶git add -A
+
+
+▶git status
+print▷ (초록문구로 나옴)
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .classpath
+        new file:   .project
+        new file:   .settings/.jsdtscope
+        new file:   .settings/org.eclipse.jdt.core.prefs
+        new file:   .settings/org.eclipse.wst.common.component
+        new file:   .settings/org.eclipse.wst.common.project.facet.core.xml
+        new file:   .settings/org.eclipse.wst.jsdt.ui.superType.container
+        new file:   .settings/org.eclipse.wst.jsdt.ui.superType.name
+        new file:   WebContent/META-INF/MANIFEST.MF
+        new file:   WebContent/NewFile.html
+        new file:   "WebContent/img/\353\213\244\354\232\264\353\241\234\353\223\234.jpg"
+        new file:   WebContent/login.jsp
+        new file:   WebContent/mem_Login.jsp
+        new file:   WebContent/mem_add.jsp
+        new file:   WebContent/mem_login.html
+        new file:   WebContent/mem_main.jsp
+        new file:   WebContent/mem_reg.html
+        new file:   WebContent/yn1_Signup.html
+        new file:   WebContent/yn1_SignupCheck.jsp
+        new file:   WebContent/yn1_index_login.html
+        new file:   WebContent/yn1_loginApply.html
+        new file:   WebContent/yn1_loginCheck.jsp
+        new file:   WebContent/yn1_signupList.jsp
+        new file:   build/classes/day44_0827/LoginBean.class
+        new file:   build/classes/day44_0827/MemberDAO.class
+        new file:   build/classes/day44_0827/MemberDAO2.class
+        new file:   build/classes/day44_0827/MemberVO.class
+        new file:   build/classes/day44_0827/MemberVO2.class
+        new file:   src/day44_0827/LoginBean.java
+        new file:   src/day44_0827/MemberDAO.java
+        new file:   src/day44_0827/MemberDAO2.java
+        new file:   src/day44_0827/MemberVO.java
+        new file:   src/day44_0827/MemberVO2.java
+
+▶git remote add origin  "본인 주소"
+ex) 본인주소 -  https://github.com/lyena8958/lyena.git  --- 우측 프로필 클릭 > Your repositories 클릭 > 넣을 저장폴더 클릭 > Code(초록버튼) 클릭 주소복사
+
+
+▶git push origin master
+▷print
+info: please complete authentication in your browser...
+Enumerating objects: 44, done.
+Counting objects: 100% (44/44), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (44/44), 72.48 KiB | 7.25 MiB/s, done.
+Total 44 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/lyena8958/lyena.git
+ * [new branch]      master -> master
