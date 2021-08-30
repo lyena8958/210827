@@ -1,0 +1,11 @@
+<jsp:useBean id="dao" class="day44_0827.MemberDAO2" scope="application"/>
+
+ ==
+MemberDAO dao;
+dao = application.getAttribute("dao");
+if(dao==null){
+	MemberDAO dao = new MemberDAO();
+	application.setAttribute("dao", dao);
+}
+
+와 같은 의미이다.
